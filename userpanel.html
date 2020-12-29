@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Responsive Side Navigation Bar</title>
+	<link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+	<script src="js/jquery.js"></script>
+	<script>
+        $(document).ready(function(){
+           $(".hamburger").click(function(){
+			   $(".wrapper").toggleClass("collapsee");
+			}); 
+        });
+			
+	</script>
+
+</head>
+<body>
+
+<div class="wrapper">
+  <div class="top_navbar">
+    <div class="hamburger">
+       <div class="one"></div>
+       <div class="two"></div>
+       <div class="three"></div>
+    </div>
+    <div class="top_menu">
+      <div class="logo">Capital FX</div>
+      <ul>
+        <li><a href="#">
+          <i class="fas fa-search"></i></a></li>
+        <li><a href="#">
+          <i class="fas fa-bell"></i>
+          </a></li>
+        <li><a href="#">
+          <i class="fas fa-user"></i>
+          </a>
+          </li>
+          
+          
+          
+      </ul>
+    </div>
+  </div>
+  
+  <div class="sidebar">
+      <ul>
+        <li><a href="#">
+          <span class="icon"><i class="fas fa-book"></i></span>
+          <span class="title">Profile</span></a></li>
+        <li><a href="#">
+          <span class="icon"><i class="fas fa-file-video"></i></span>
+          <span class="title">My Investment</span>
+          </a></li>
+        <li><a href="#">
+          <span class="icon"><i class="fas fa-volleyball-ball"></i></span>
+          <span class="title">Signals</span>
+          </a></li>
+        <li><a href="#" class="active">
+          <span class="icon"><i class="fas fa-blog"></i></span>
+          <span class="title">Withdrawal</span>
+          </a></li>
+        <li><a href="#">
+          <span class="icon"><i class="fas fa-leaf"></i></span>
+          <span class="title">Deposit Funds</span>
+          </a></li>
+           <li><a href="#">
+          <span class="icon"><i class="fas fa-book"></i></span>
+          <span class="title">Account Settings</span></a></li>
+        <li><a href="#">
+          <span class="icon"><i class="fas fa-file-video"></i></span>
+          <span class="title">Learn Forex</span>
+          </a></li>
+        <li><a href="#">
+          <span class="icon"><i class="fas fa-volleyball-ball"></i></span>
+          <span class="title">Become an Expert</span>
+          </a></li>
+        <li><a href="#" class="active">
+          <span class="icon"><i class="fas fa-blog"></i></span>
+          <span class="title">Log out</span>
+          </a></li>
+    </ul>
+  </div>
+  
+  <div class="main_container">
+         <div class="row">
+                    <div class="col-xl-3 col-sm-6">
+                      <div class="card card-mini mb-4">
+                        <div class="card-body">
+                          <h2 class="mb-1">71,503</h2>
+                          <p>Online Signups</p>
+                          <div class="chartjs-wrapper">
+                            <canvas id="barChart"></canvas>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-3 col-sm-6">
+                      <div class="card card-mini  mb-4">
+                        <div class="card-body">
+                          <h2 class="mb-1">9,503</h2>
+                          <p>New Visitors Today</p>
+                          <div class="chartjs-wrapper">
+                            <canvas id="dual-line"></canvas>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-3 col-sm-6">
+                      <div class="card card-mini mb-4">
+                        <div class="card-body">
+                          <h2 class="mb-1"> $7,503</h2>
+                          <p>Monthly Revenue</p>
+                          <div class="chartjs-wrapper">
+                            <canvas id="area-chart"></canvas>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-3 col-sm-6">
+                      <div class="card card-mini mb-4">
+                        <div class="card-body">
+                          <h2 class="mb-1">$95,503</h2>
+                          <p>Total Revenue This Year</p>
+                          <div class="chartjs-wrapper">
+                            <canvas id="line"></canvas>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>   
+      
+      		<div class="row">
+							<div class="col-xl-8 col-md-12">
+                      <!-- Sales Graph -->
+                      <div class="card card-default" data-scroll-height="675">
+                        <div class="card-header">
+                          <h2>Investment Profile</h2>
+                        </div>
+                        <div class="card-body">
+                          <canvas id="linechart" class="chartjs"></canvas>
+                        </div>
+                        <div class="card-footer d-flex flex-wrap bg-white p-0">
+                          <div class="col-6 px-0">
+                            <div class="text-center p-4">
+                              <h4>$6,308</h4>
+                              <p class="mt-2">Total Investment of this year</p>
+                            </div>
+                          </div>
+                          <div class="col-6 px-0">
+                            <div class="text-center p-4 border-left">
+                              <h4>$70,506</h4>
+                              <p class="mt-2">Total revenue of this year</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+</div>
+							<div class="col-xl-4 col-md-12">
+                  <!-- Doughnut Chart -->
+                  <div class="card card-default" data-scroll-height="675">
+                    <div class="card-header justify-content-center">
+                      <h2>Investment Overview</h2>
+                    </div>
+                    <div class="card-body" >
+                      <canvas id="doChart" ></canvas>
+                    </div>
+                    <a href="#" class="pb-5 d-block text-center text-muted"><i class="mdi mdi-download mr-2"></i> Download overall report</a>
+                    <div class="card-footer d-flex flex-wrap bg-white p-0">
+                      <div class="col-6">
+                        <div class="py-4 px-4">
+                          <ul class="d-flex flex-column justify-content-between">
+                            <li class="mb-2"><i class="mdi mdi-checkbox-blank-circle-outline mr-2" style="color: #4c84ff"></i>Order Completed</li>
+                            <li><i class="mdi mdi-checkbox-blank-circle-outline mr-2" style="color: #80e1c1 "></i>Order Unpaid</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="col-6 border-left">
+                        <div class="py-4 px-4 ">
+                          <ul class="d-flex flex-column justify-content-between">
+                            <li class="mb-2"><i class="mdi mdi-checkbox-blank-circle-outline mr-2" style="color: #8061ef"></i>Order Pending</li>
+                            <li><i class="mdi mdi-checkbox-blank-circle-outline mr-2" style="color: #ffa128"></i>Order Canceled</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+</div>
+						</div>
+      
+  </div>
+</div>
+	
+    <script src="assets/plugins/charts/Chart.min.js"></script>
+    <script src="assets/js/chart.js"></script>
+    <script src="assets/js/date-range.js"></script>
+    <script src="assets/js/custom.js"></script>
+     
+</body>
+    
+</html>
